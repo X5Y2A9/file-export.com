@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File and Folder Management</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body oncontextmenu="return false;">
+    <div class="container">
+        <div class="top-bar">
+            <div class="nav-buttons">
+                <button id="back-button" class="material-icons" disabled>arrow_back</button>
+                <button id="forward-button" class="material-icons" disabled>arrow_forward</button>
+            </div>
+            <div id="address-bar" class="address-bar"></div>
+        </div>
+        <div class="toolbar">
+            <button id="create-file">Create File</button>
+            <button id="create-folder">Create Folder</button>
+            <button id="import-data">Import File</button>
+            <button id="import-link-button">Paste DB</button>
+            <button id="export-data">Export</button>
+            <button id="share-data">Share</button>
+            <button id="show-tutorial">Tutorial</button>
+            <button id="check-data">Check Data</button>
+        </div>
+        <div id="file-system" class="file-system"></div>
+    </div>
+
+    <!-- Context Menu -->
+    <div id="context-menu" class="context-menu">
+        <ul>
+            <li data-action="edit">Edit</li>
+            <li data-action="rename">Rename</li>
+            <li data-action="move-to">Move To...</li>
+            <li data-action="delete">Delete</li>
+        </ul>
+    </div>
+
+    <!-- Modals -->
+    <div id="tutorial-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <iframe id="tutorial-iframe" src="./tutorial.html"></iframe>
+        </div>
+    </div>
+
+    <div id="edit-file-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="edit-file-title">Edit File</h2>
+            <textarea id="edit-file-textarea"></textarea>
+            <button id="save-file-button">Save</button>
+        </div>
+    </div>
+
+    <div id="move-to-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Move to...</h2>
+            <ul id="move-to-options"></ul>
+        </div>
+    </div>
+
+    <div id="rename-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="rename-title">Rename</h2>
+            <input type="text" id="rename-input" />
+            <button id="save-rename-button">Save</button>
+        </div>
+    </div>
+
+    <div id="import-link-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Import from Link or Paste JSON</h2>
+            <textarea id="import-input-textarea" placeholder="Paste JSON link or raw JSON content here"></textarea>
+            <button id="import-confirm-button">Import</button>
+        </div>
+    </div>
+
+    <div id="share-link-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Shareable Link</h2>
+            <input type="text" id="share-link-input" readonly />
+            <button id="copy-share-link-button">Copy</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
