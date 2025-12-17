@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Export [ALPHA]</title>
+    <title>File Export [alpha]</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -86,6 +86,14 @@
             <h2>Shareable Link</h2>
             <input type="text" id="share-link-input" readonly />
             <button id="copy-share-link-button">Copy</button>
+        </div>
+    </div>
+
+    <div id="custom-dialog-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="custom-dialog-title"></h2>
+            <p id="custom-dialog-message"></p>
+            <button id="custom-dialog-close-button">OK</button>
         </div>
     </div>
 
