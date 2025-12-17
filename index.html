@@ -7,6 +7,7 @@
     <title>File Export [ALPHA]</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 </head>
 <body oncontextmenu="return false;">
     <div class="container">
@@ -20,12 +21,17 @@
         <div class="toolbar">
             <button id="create-file">Create File</button>
             <button id="create-folder">Create Folder</button>
-            <button id="import-data">Import File</button>
+            <button id="import-files">Import Files</button>
             <button id="import-link-button">Paste DB</button>
-            <button id="export-data">Export</button>
+            <button id="export-selected">Export Selected</button>
+            <button id="export-db">Export DB</button>
             <button id="share-data">Share</button>
             <button id="show-tutorial">Tutorial</button>
             <button id="check-data">Check Data</button>
+        </div>
+        <div class="selection-toolbar">
+            <input type="checkbox" id="select-all-checkbox">
+            <label for="select-all-checkbox">Select All</label>
         </div>
         <div id="file-system" class="file-system"></div>
     </div>
@@ -95,3 +101,4 @@
     <script src="main.js"></script>
 </body>
 </html>
+
